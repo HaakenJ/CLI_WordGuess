@@ -1,0 +1,19 @@
+{
+  "name": "cli_wordguess",
+  "version": "1.0.0",
+  "description": "A hangman style game played from the command line.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaakenJ/CLI_WordGuess.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HaakenJ/CLI_WordGuess/issues"
+  },
+  "homepage": "https://github.com/HaakenJ/CLI_WordGuess#readme"
+}
