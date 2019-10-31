@@ -7,22 +7,24 @@ let Word = function (word) {
     for (let i = 0; i < word.length; i++) {
         wordArr[i] = new Letter(word[i]);
     }
-
     this.wordArr = wordArr;
-
-    this.prototype.toString = function() {
-        let result = [];
-        for (let i = 0; i < this.wordArr.length; i++) {
-            result[i] = this.wordArr[i].getChar();
-        }
-        return result.join(" ");
-    }
 
     this.checkGuess = function(guess) {
         for (let i = 0; i < this.wordArr.length; i++) {
             this.wordArr[i].checkLetter(guess);
         }
     }
+    
+    Word.prototype.toString = function() {
+        let result = [];
+        for (let i = 0; i < this.wordArr.length; i++) {
+            result[i] = this.wordArr[i].getChar();
+        }
+        return result.join(" ");
+    }
 }
+
+
+
 
 module.exports = Word;
