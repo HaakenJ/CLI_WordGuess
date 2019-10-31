@@ -2,6 +2,7 @@ let Letter = function(char) {
     this.char = char;
     this.guessed = false;
 
+    // Return either the character or an underscore.
     this.getChar = function() {
         if (this.guessed) {
             return this.char;
@@ -10,6 +11,7 @@ let Letter = function(char) {
         }
     }
 
+    // Check if a guessed letter is correct.
     this.checkLetter = function(letter) {
         if (letter === this.char) {
             this.guessed = true;

@@ -3,12 +3,14 @@ const Letter = require("./letter.js");
 let Word = function (word) {
     this.word = word;
 
+    // Create an array where each letter in this.word is a Letter object.
     let wordArr = [];
     for (let i = 0; i < this.word.length; i++) {
         wordArr[i] = new Letter(this.word[i]);
     }
     this.wordArr = wordArr;
 
+    // Return true if the guess is correct for any letter in wordArr.
     this.checkGuess = function(guess) {
         let rightGuess = false;
         for (let i = 0; i < this.wordArr.length; i++) {
@@ -19,6 +21,7 @@ let Word = function (word) {
         return rightGuess;
     }
 
+    // Update the letters in wordArr to show guessed letters.
     this.updateLetters = function(guess) {
         for (let i = 0; i < this.wordArr.length; i++) {
                 this.wordArr[i].checkLetter(guess);
@@ -26,6 +29,7 @@ let Word = function (word) {
 
     }
 
+    // Return false if any letter in wordArr is still unguessed.
     this.isGuessed = function() {
         for (let i = 0; i < wordArr.length; i++) {
             if (!wordArr[i].guessed) {
@@ -35,6 +39,7 @@ let Word = function (word) {
         return true;
     }
     
+    // Return the word in wordArr as letters and/or underscores.
     Word.prototype.toString = function() {
         let result = [];
         for (let i = 0; i < this.wordArr.length; i++) {
