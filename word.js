@@ -4,18 +4,29 @@ let Word = function (word) {
     this.word = word;
 
     let wordArr = [];
-    for (let i = 0; i < word.length; i++) {
-        wordArr[i] = new Letter(word[i]);
+    for (let i = 0; i < this.word.length; i++) {
+        wordArr[i] = new Letter(this.word[i]);
     }
     this.wordArr = wordArr;
 
     this.checkGuess = function(guess) {
+        let rightGuess = false;
         for (let i = 0; i < this.wordArr.length; i++) {
-            this.wordArr[i].checkLetter(guess);
+            if (this.wordArr[i].checkLetter(guess)) {
+                rightGuess = true;
+            }
         }
+        return rightGuess;
     }
 
-    this.isWordGuessed = function() {
+    this.updateLetters = function(guess) {
+        for (let i = 0; i < this.wordArr.length; i++) {
+                this.wordArr[i].checkLetter(guess);
+        }
+
+    }
+
+    this.isGuessed = function() {
         for (let i = 0; i < wordArr.length; i++) {
             if (!wordArr[i].guessed) {
                 return false;
@@ -35,4 +46,4 @@ let Word = function (word) {
 
 module.exports = Word;
 
-
+let newWord = new Word("apple");
