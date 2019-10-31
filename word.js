@@ -14,6 +14,15 @@ let Word = function (word) {
             this.wordArr[i].checkLetter(guess);
         }
     }
+
+    this.isWordGuessed = function() {
+        for (let i = 0; i < wordArr.length; i++) {
+            if (!wordArr[i].guessed) {
+                return false;
+            }
+        }
+        return true;
+    }
     
     Word.prototype.toString = function() {
         let result = [];
@@ -24,7 +33,6 @@ let Word = function (word) {
     }
 }
 
-
-
-
 module.exports = Word;
+
+

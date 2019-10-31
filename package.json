@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/HaakenJ/CLI_WordGuess/issues"
   },
-  "homepage": "https://github.com/HaakenJ/CLI_WordGuess#readme"
+  "homepage": "https://github.com/HaakenJ/CLI_WordGuess#readme",
+  "dependencies": {
+    "inquirer": "^7.0.0"
+  }
 }
