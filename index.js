@@ -37,7 +37,8 @@ async function playGame(word) {
             message: "Please enter a guess: "
         }]).then((guess) => {
             if (alreadyGuessed.has(guess.currentGuess)) {
-                console.log(`\nYou already guessed "${guess.currentGuess}". Let's try again.`);
+                console.log(`\nYou already guessed "${guess.currentGuess}". Let's try again.\n`);
+                console.log("--------------------------------------------------\n");
                 return;
             } 
             alreadyGuessed.add(guess.currentGuess);
@@ -47,12 +48,13 @@ async function playGame(word) {
             } else {
                 console.log("\nLooks like that letter isn't in the word. You lose a guess");
                 guessesLeft--;
-                console.log(`You have ${guessesLeft} guesses left.\n`);
+                console.log(`\nYou have ${guessesLeft} guesses left.\n`);
             }
+            console.log("--------------------------------------------------\n");
         })
     }
     if (guessesLeft > 0) {
-        console.log(`You won! You had ${guessesLeft} guesses left and the word was ${word + ""}`);
+        console.log(`You won! You had ${guessesLeft} guesses left and the word was "${word + ""}"`);
     } else {
         console.log(`Oh no! You ran out of guesses...the word was ${word}`);
     }
