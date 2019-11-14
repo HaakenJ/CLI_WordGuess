@@ -4,6 +4,7 @@
   "description": "A hangman style game played from the command line.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/HaakenJ/CLI_WordGuess#readme",
   "dependencies": {
+    "clear": "^0.1.0",
     "inquirer": "^7.0.0"
   }
 }

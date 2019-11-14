@@ -1,10 +1,17 @@
 # CLI_WordGuess
+
 A hangman style game played from the command line.
 
-Simply run npm install then node index.js and get playing!
+### Simply run:
 
-##Technologies
- Node.js
- inquirer.js
- 
-<a href="https://imgur.com/a/oCkPQLe">Screenshot of Gameplay</a>
+1. `npm install`
+2. `node index.js` or `npm start`
+3. and you're playing!
+
+## Technologies
+
+- [Node.js]()
+- [Inquirer]()
+- [Clear]()
+
+![Picture](./assets/wordGuessGame.png)
